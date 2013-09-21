@@ -7,43 +7,84 @@
 //
 
 #import "NTAppDelegate.h"
+#import "NTScheduleViewController.h"
+#import "UIColor+FlatUIColors.h"
+
+@interface NTAppDelegate ()
+
+@property (nonatomic,strong) UITabBarController *tabBarController;
+
+@end
 
 @implementation NTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+    self.tabBarController = [[UITabBarController alloc] init];
+
+    int i = 0;
+    NSArray *titleString = [[NSArray alloc] initWithObjects:@"Mon", @"Tue", @"Wed", @"Thu", @"Fri", nil];
+    NSArray *imageString = [[NSArray alloc] initWithObjects:@"Monday.png", @"Tuesday.png", @"Wednesday.png", @"Thursday.png", @"Friday.png", nil];
+
+    NSMutableArray *scheduleControllers = [[NSMutableArray alloc] init];
+
+    /* Setting up The View Controllers For Each Tab */
+
+    for (i = 0; i <= 4 ; i++) {
+
+        // Uses the NS_ENUM NTScheduleViewDay to initialize the class for the specific day
+        NTScheduleViewController *specificDaySchedule = [[NTScheduleViewController alloc] initWithStyle:UITableViewStylePlain forDay:i];
+
+        specificDaySchedule.tabBarItem = [[UITabBarItem alloc] initWithTitle:[titleString objectAtIndex:i] image:[UIImage imageNamed:[imageString objectAtIndex:i]] tag:i];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:specificDaySchedule];
+        [scheduleControllers addObject:navController];
+    }
+
+    self.tabBarController.viewControllers = scheduleControllers;
+
+    [self setSelectedTabBarItem];
+
+    /* Customize tabBar */
+
+    //[[UITabBar appearance] setBarStyle:UIBarStyleBlack];
+    [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.427 green:0.678 blue:0.859 alpha:1]];
+
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSForegroundColorAttributeName:[UIColor cloudsColor],
+                                                        NSFontAttributeName:[UIFont fontWithName:@"Signika-Light" size:0.0]}
+                                                        forState:UIControlStateNormal];
+
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor cloudsColor]} forState:UIControlStateHighlighted];
+
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self setSelectedTabBarItem];
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
+#pragma mark - Private Methods
+
+- (void)setSelectedTabBarItem
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    /*
+     * Get the Current Weekday & Set The Selected Tab Bar to that day
+     */
+
+    CFAbsoluteTime at = CFAbsoluteTimeGetCurrent();
+    CFTimeZoneRef tz = CFTimeZoneCopySystem();
+    SInt32 weekdayNum = CFAbsoluteTimeGetDayOfWeek(at, tz);
+
+    if (weekdayNum != 0 || weekdayNum != 6) {
+        [self.tabBarController setSelectedIndex:weekdayNum - 1];
+    }
 }
 
 @end
