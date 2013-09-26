@@ -12,6 +12,8 @@
 		4E90308917ED20DF00BF3742 /* Signika-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E90308517ED20DF00BF3742 /* Signika-Regular.otf */; };
 		4E90308A17ED20DF00BF3742 /* Signika-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E90308617ED20DF00BF3742 /* Signika-Semibold.otf */; };
 		4E90308C17ED245200BF3742 /* Entypo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E90308B17ED245200BF3742 /* Entypo.otf */; };
+		4E90308F17EDF72C00BF3742 /* NTEmptyScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E90308E17EDF72C00BF3742 /* NTEmptyScheduleCell.m */; };
+		4E90309217EFE61700BF3742 /* NTFilledScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E90309117EFE61700BF3742 /* NTFilledScheduleCell.m */; };
 		4ED9DC5117EC09F500647FC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED9DC5017EC09F500647FC8 /* Foundation.framework */; };
 		4ED9DC5317EC09F600647FC8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED9DC5217EC09F600647FC8 /* CoreGraphics.framework */; };
 		4ED9DC5517EC09F600647FC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED9DC5417EC09F600647FC8 /* UIKit.framework */; };
@@ -44,6 +46,10 @@
 		4E90308517ED20DF00BF3742 /* Signika-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Signika-Regular.otf"; sourceTree = "<group>"; };
 		4E90308617ED20DF00BF3742 /* Signika-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Signika-Semibold.otf"; sourceTree = "<group>"; };
 		4E90308B17ED245200BF3742 /* Entypo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.otf; sourceTree = "<group>"; };
+		4E90308D17EDF72C00BF3742 /* NTEmptyScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEmptyScheduleCell.h; sourceTree = "<group>"; };
+		4E90308E17EDF72C00BF3742 /* NTEmptyScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEmptyScheduleCell.m; sourceTree = "<group>"; };
+		4E90309017EFE61700BF3742 /* NTFilledScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilledScheduleCell.h; sourceTree = "<group>"; };
+		4E90309117EFE61700BF3742 /* NTFilledScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilledScheduleCell.m; sourceTree = "<group>"; };
 		4ED9DC4D17EC09F500647FC8 /* NottsTimetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NottsTimetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED9DC5017EC09F500647FC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4ED9DC5217EC09F600647FC8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -179,6 +185,10 @@
 		4ED9DC8617EC249200647FC8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E90308D17EDF72C00BF3742 /* NTEmptyScheduleCell.h */,
+				4E90308E17EDF72C00BF3742 /* NTEmptyScheduleCell.m */,
+				4E90309017EFE61700BF3742 /* NTFilledScheduleCell.h */,
+				4E90309117EFE61700BF3742 /* NTFilledScheduleCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -304,7 +314,9 @@
 			files = (
 				4ED9DC8C17EC24DD00647FC8 /* UIColor+FlatUIColors.m in Sources */,
 				4ED9DC6117EC09F600647FC8 /* NTAppDelegate.m in Sources */,
+				4E90308F17EDF72C00BF3742 /* NTEmptyScheduleCell.m in Sources */,
 				4ED9DC5D17EC09F600647FC8 /* main.m in Sources */,
+				4E90309217EFE61700BF3742 /* NTFilledScheduleCell.m in Sources */,
 				4ED9DC8117EC0A5E00647FC8 /* NTScheduleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -44,7 +44,6 @@
 
 + (UIColor *)wetAsphaltColor {
     return [UIColor colorWithRed:0.204 green:0.286 blue:0.369 alpha:1];
-
 }
 
 + (UIColor *)midnightBlueColor {

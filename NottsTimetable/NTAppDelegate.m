@@ -49,8 +49,7 @@
 
     /* Customize tabBar */
 
-    //[[UITabBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UITabBar appearance] setBarStyle:UIBarStyleBlack];
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.427 green:0.678 blue:0.859 alpha:1]];
 
     [[UITabBarItem appearance] setTitleTextAttributes:@{

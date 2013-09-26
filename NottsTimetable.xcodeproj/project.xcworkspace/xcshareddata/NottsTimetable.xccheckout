@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CF9AEE11-3204-45BB-9291-ECC0E8487BBA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NottsTimetable</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CA0F561D-4A94-4204-ADCD-B8C3BA633101</key>
+		<string>ssh://github.com/TosinAF/NottsTimetable.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NottsTimetable.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CA0F561D-4A94-4204-ADCD-B8C3BA633101</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/TosinAF/NottsTimetable.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CA0F561D-4A94-4204-ADCD-B8C3BA633101</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CA0F561D-4A94-4204-ADCD-B8C3BA633101</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NottsTimetable</string>
+		</dict>
+	</array>
+</dict>
+</plist>
