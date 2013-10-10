@@ -1,6 +1,8 @@
 # UoN Timetable Organizer
 * * *
 
+<img src="https://raw.github.com/TosinAF/NottsTimetable/master/Screenshot.png" height="50%" width="50%" />
+
 This app allows any University Of Nottingham Student With an iOS Device to pick the classes they are taking & it will show a Day by Day View of their Timetable.
 
 They can constantly update their classes which allows students to imagine how their schedules will be like depending on the classes they take.
